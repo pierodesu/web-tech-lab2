@@ -1,0 +1,192 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
+      <title>Document</title>
+  </head>
+  <body>
+      <div class="bg-img"></div>
+      <header class="header">
+          <div class="top">
+              <div class="top_nav container">
+                  <p class="text_city">
+                      Ваш город: Алматы
+                  </p>
+                  <p class="text_user">
+                      88005553535
+                  </p>
+              </div>
+          </div>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container">
+                  <a class="navbar-brand" href="index.html">
+                      <img src="D:\University Stuff\Web Technologies\Lab2.3. Final\images\ghost.png" width="60px" height="50px" alt="">
+                    </a>              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                  <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="comics.html">Comics</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="manga.html">Manga</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="bestsellers.html">Bestsellers</a>
+                    </li>
+                  </ul>
+                  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-right: 20px;">
+                    <img src="D:\University Stuff\Web Technologies\Lab2.3. Final\images\shopping-basket.png" alt="basket" width="30x" height="30px"/>
+                  </button>
+
+                  <form class="d-flex">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+      </header>
+      <div class="comics_main container">
+          <h1>Comics</h1>
+<!--          <div class="paginator">
+              <p>1/20</p>
+          </div> -->
+          <div class="card_lists row" id="card_lists">
+
+          </div>
+      </div>
+
+
+
+      <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Basket</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>
+                  <img src="https://staticlib.me/uploads/cover/kumo-desu-ga-nani-ka-daily-life-of-the-four-spider-sisters/cover/ufQwzdV8BEPu_250x350.jpg" width="150px" height="200px"/>
+                </td>
+                <td>Kumo desu ga, Nani ka? Kumoko Sisters no Nichijou</td>
+                <td>10.99$</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>
+                <img src="https://staticlib.me/uploads/cover/tensei-shitara-slime-datta-ken/cover/kQbJRzCaFkbi_250x350.jpg" width="150px" height="200px"/>
+              </td>
+              <td>Tensei Shitara Slime Datta Ken</td>
+                <td>10.99$</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Total: 21:98$</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <script>
+
+      const array = [{
+        name:"Avengers: No More Bullying Vol 1 1",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/d/df/Avengers_No_More_Bullying_Vol_1_1.jpg/revision/latest/scale-to-width-down/329?cb=20150102063239",
+        price:8.99
+      },
+      {
+        name:"X-Men Unlimited Vol 1 1",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/7/7e/X-Men_Unlimited_Vol_1_1.jpg/revision/latest/scale-to-width-down/325?cb=20191127032921",
+        price:12.99
+      },
+      {
+        name:"Amazing Spider-Man Vol 2 30",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/1/14/Amazing_Spider-Man_Vol_2_30.jpg/revision/latest/scale-to-width-down/324?cb=20180130013606",
+        price:11.99
+      },
+      {
+        name:"Amazing Spider-Man Vol 2 36",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/8/82/Amazing_Spider-Man_Vol_2_36.jpg/revision/latest/scale-to-width-down/331?cb=20180130014737",
+        price:11.99
+      },
+      {
+        name:"Amazing Spider-Man Vol 2 29",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/2/2b/Amazing_Spider-Man_Vol_2_29.jpg/revision/latest/scale-to-width-down/325?cb=20180130012602",
+        price:9.99
+      },
+      {
+        name:"Wolverine: The Origin Vol 1 1",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/a/ac/Wolverine_The_Origin_Vol_1_1.jpg/revision/latest/scale-to-width-down/333?cb=20100123231248",
+        price:12.99
+      },
+      {
+        name:"Guardians of the Galaxy Vol 2",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/5/5b/Guardians_of_the_Galaxy_Vol_2_25.jpg/revision/latest/scale-to-width-down/325?cb=20191021083229",
+        price:8.99
+      },
+      {
+        name:"New Avengers Annual Vol 1 3",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/4/42/New_Avengers_Annual_Vol_1_3.jpg/revision/latest/scale-to-width-down/325?cb=20091210155603",
+        price:7.99
+      },
+      {
+        name:"Thor: God of Thunder Vol 1 6",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/c/c9/Thor_God_of_Thunder_Vol_1_6.jpg/revision/latest/scale-to-width-down/329?cb=20130309145910",
+        price:9.99
+      },
+      {
+        name:"Ultimate Fallout Vol 1 4",
+        image:"https://static.wikia.nocookie.net/marveldatabase/images/1/14/Ultimate_Fallout_Vol_1_4.jpg/revision/latest/scale-to-width-down/329?cb=20110809004102",
+        price:10.99
+      },
+    ];
+      const card_lists = document.getElementById('card_lists');
+      let list = "";
+      array.forEach(item=>{
+        const {name, image, price} = item;
+
+        list += `
+        <div class="card col-md-2 col-sm-3">
+          <img class="card-img-top" src=${image} alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">${name}</h5>
+            <p class="card-text">Price: ${price}$ </p>
+          </div>
+          <button class="btn btn-success mb-2">Add to basket</button>
+        </div>
+        `;
+      });
+      card_lists.innerHTML = list;
+      </script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+  </body>
+  </html>
